@@ -11,7 +11,6 @@ module QP
       # There must be a better way
       tokens = []
       assocs = []
-      re = 
       string.scan(THE_RE) do |grp|
         tokens << unquote(grp.last) unless grp.last.nil?
         assocs << [grp[1], unquote(grp[2])] unless !grp[1..2].all?

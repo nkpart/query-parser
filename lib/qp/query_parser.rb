@@ -2,9 +2,9 @@ module QP
   class QueryParser
     SINGLE = "\\\'[\\w|\\s]+\\\'"
     DOUBLE = "\\\"[\\w|\\s]+\\\""
-    TOK = "\\w+"
-    TOKEN_RE = "(#{SINGLE}|#{TOK}|#{DOUBLE})"
-    ASSOC_RE = "(#{TOK}):(#{TOK}|#{SINGLE}|#{DOUBLE})"
+    WORD = "\\w+"
+    TOKEN_RE = "(#{WORD}|#{SINGLE}|#{DOUBLE})"
+    ASSOC_RE = "(#{WORD}):#{TOKEN_RE}"
     THE_RE = Regexp.new("(#{ASSOC_RE}|#{TOKEN_RE})") 
     
     def parse string

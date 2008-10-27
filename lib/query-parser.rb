@@ -1,4 +1,4 @@
-module QP
+module Awesome
   class QueryParser
     SINGLE = "\\\'[\\w|\\s]+\\\'"
     DOUBLE = "\\\"[\\w|\\s]+\\\""

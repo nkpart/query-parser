@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/spec_helper'
-require 'qp'
+require 'query-parser'
 
 def assert_parses string, tokens, associations
   r_tokens, r_associations = QP::QueryParser.new.parse(string)
